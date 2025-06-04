@@ -17,13 +17,40 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/dashboard.css">
+
+  <title>Painel do Usuário - clickBest</title>
+
 </head>
 <body>
-    <h1>Usuario autorizado</h1>
+  <aside>
+    <h2>Menu</h2>
+    <a href="#">🗳️ relatórios</a>
+  </aside>
+  <main>
+    <header>
+      <img src="img/clickBest.png" alt="">
+      <a href="sair.php" class="logout">Sair</a>
+    </header>
 
-    <a href="sair.php">sair</a>
+    <section>
+        <div class="user">
+            <span class="username">Olá, <?php echo $logado; ?>!</span>
+        </div>
+           
+        <h2>Votações Ativas</h2>
+        <div class="cards">
+
+            <div class="card">
+                <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
+                <p>Vote agora no seu favorito!</p>
+                <button class="vote-btn">Votar</button>
+            </div>
+
+        </div>
+    </section>
+  </main>
 </body>
 </html>
