@@ -68,13 +68,8 @@ header img {
     cursor: pointer;
 }
 
-section {
-    padding: 1rem;
-    margin-top: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.logout:hover {
+    background-color: #c7442d;
 }
 
 div .username {
@@ -87,15 +82,71 @@ div .username {
     margin-left: 2rem;
 }
 
-.cards {
+section {
+    padding: 1rem;
     margin-top: 3rem;
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-categoria {
+    width: 100%;
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+}
+
+.categoria {
+  position: relative;
+  width: 85%;
+  max-width: 1150px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 10px;
+  margin-inline: 5rem;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.cards-carousel .card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+.cards-carousel::before,
+.cards-carousel::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cards-carousel::before {
+  left: 60px;
+  background: linear-gradient(to right, #ececf8 0%, transparent 100%);
+}
+
+.cards-carousel::after {
+  right: 70px;
+  background: linear-gradient(to left, #ececf8 0%, transparent 100%);
 }
 
 .card {
-    width: 20rem;
-    height: 22rem;
+    width: 18rem;
+    height: 21rem;
     background-color: #fff;
     border-radius: 12px;
     padding: 18px;
@@ -143,32 +194,6 @@ div .username {
     background-color: #1d376b;
 }
 
-.categoria {
-  position: relative;
-  width: 100%;
-  max-width: 1150px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.cards-carousel {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  gap: 20px;
-  padding: 10px;
-  margin-inline: 5rem;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
-}
-
-.cards-carousel .card {
-  flex: 0 0 auto;
-  scroll-snap-align: start;
-}
-
 .carousel-btn {
   position: absolute;
   top: 50%;
@@ -180,7 +205,7 @@ div .username {
   padding: 10px 14px;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 1;
+  z-index: 2;
 }
 
 .carousel-btn.left {
