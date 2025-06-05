@@ -240,6 +240,11 @@ section {
     background: #bebebe;
 }
 
+.card .info-card h4.badge5 {
+    color: #00f2ff;
+    background: #e6feff;
+}
+
 .card .info-card p {
     font-size: .9rem;
 }

@@ -309,7 +309,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
           <h2>Melhor dupla:</h2>
         </div>
 
-        <div class="categoria" data-categoria="cantor">
+        <div class="categoria" data-categoria="duo">
           <button class="carousel-btn left" onclick="scrollCarousel('left')">&#10094;</button>
 
           <div class="cards-carousel">
@@ -317,37 +317,41 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
             <div class="card">
               <div class="img-card"><img src="img/perfil-de-usuario.webp" alt=""></div>
               <div class="info-card">
-                <h3>Lorem ipsum, dolor sit amet</h3>
+                <h3>Eduarda Elvira e Luciana Souza</h3>
+                <h4 class="badge5">Dupla</h4>
                 <p>Vote agora no seu favorito!</p>
               </div>
-              <button class="vote-btn" data-categoria="cantor" data-valor="artista1">Selecionar</button>
+              <button class="vote-btn" data-categoria="duo" data-valor="dupla1">Selecionar</button>
             </div>
 
             <div class="card">
               <div class="img-card"><img src="img/perfil-de-usuario.webp" alt=""></div>
               <div class="info-card">
-                <h3>Lorem ipsum, dolor sit amet</h3>
+                <h3>Ismael Bione e Richard Wallace</h3>
+                <h4 class="badge5">Dupla</h4>
                 <p>Vote agora no seu favorito!</p>
               </div>
-              <button class="vote-btn" data-categoria="cantor" data-valor="artista2">Selecionar</button>
+              <button class="vote-btn" data-categoria="duo" data-valor="dupla2">Selecionar</button>
             </div>
 
             <div class="card">
               <div class="img-card"><img src="img/perfil-de-usuario.webp" alt=""></div>
               <div class="info-card">
-                <h3>Lorem ipsum, dolor sit amet</h3>
+                <h3>João Raimundo e Leandro Mariano</h3>
+                <h4 class="badge5">Dupla</h4>
                 <p>Vote agora no seu favorito!</p>
               </div>
-              <button class="vote-btn" data-categoria="cantor" data-valor="artista3">Selecionar</button>
+              <button class="vote-btn" data-categoria="duo" data-valor="dupla3">Selecionar</button>
             </div>
 
             <div class="card">
               <div class="img-card"><img src="img/perfil-de-usuario.webp" alt=""></div>
               <div class="info-card">
-                <h3>Lorem ipsum, dolor sit amet</h3>
+                <h3>Matheus Xavier e Paulo Henrique</h3>
+                <h4 class="badge5">Dupla</h4>
                 <p>Vote agora no seu favorito!</p>
               </div>
-              <button class="vote-btn" data-categoria="cantor" data-valor="artista4">Selecionar</button>
+              <button class="vote-btn" data-categoria="duo" data-valor="dupla4">Selecionar</button>
             </div>
 
           </div>
@@ -540,7 +544,11 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
           <input type="radio" name="full" value="fullstack1" id="full-fullstack1">
           <input type="radio" name="full" value="fullstack2" id="full-fullstack2">
           <br>
-
+          <input type="radio" name="duo" value="dupla1" id="dupla1">
+          <input type="radio" name="duo" value="dupla2" id="dupla2">
+          <input type="radio" name="duo" value="dupla3" id="dupla3">
+          <input type="radio" name="duo" value="dupla4" id="dupla4">
+          <br>
         </div>
 
         <button type="submit" id="submit-btn">Registrar Votos</button>
