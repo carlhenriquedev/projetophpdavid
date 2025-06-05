@@ -243,11 +243,21 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
             <div class="card">
               <div class="img-card"><img src="img/perfil-de-usuario.webp" alt=""></div>
               <div class="info-card">
-                <h3>Richard Wallace Lins</h3>
+                <h3>Paulo Henrique da Silva</h3>
                 <h4 class="badge3">Back-end</h4>
                 <p>Vote agora no seu favorito!</p>
               </div>
               <button class="vote-btn" data-categoria="back" data-valor="backend7">Selecionar</button>
+            </div>
+
+            <div class="card">
+              <div class="img-card"><img src="img/perfil-de-usuario.webp" alt=""></div>
+              <div class="info-card">
+                <h3>Richard Wallace Lins</h3>
+                <h4 class="badge3">Back-end</h4>
+                <p>Vote agora no seu favorito!</p>
+              </div>
+              <button class="vote-btn" data-categoria="back" data-valor="backend8">Selecionar</button>
             </div>
 
           </div>
@@ -522,9 +532,10 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
           <input type="radio" name="back" value="backend2" id="back-backend2">
           <input type="radio" name="back" value="backend3" id="back-backend3">
           <input type="radio" name="back" value="backend4" id="back-backend4">
-          <input type="radio" name="back" value="backend1" id="back-backend5">
-          <input type="radio" name="back" value="backend2" id="back-backend6">
-          <input type="radio" name="back" value="backend3" id="back-backend7">
+          <input type="radio" name="back" value="backend5" id="back-backend5">
+          <input type="radio" name="back" value="backend6" id="back-backend6">
+          <input type="radio" name="back" value="backend7" id="back-backend7">
+          <input type="radio" name="back" value="backend8" id="back-backend8">
           <br>
           <input type="radio" name="full" value="fullstack1" id="full-fullstack1">
           <input type="radio" name="full" value="fullstack2" id="full-fullstack2">
