@@ -2,7 +2,7 @@
 
     if (isset($_POST['submit'])) {
 
-        include("connection.php");
+        include("config/connection.php");
 
         $name = $_POST["username"];
         $email = $_POST["email"];
