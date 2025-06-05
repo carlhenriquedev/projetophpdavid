@@ -75,14 +75,14 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
             </div>
             <button class="vote-btn" data-categoria="cantor" data-valor="artista3">Votar</button>
           </div>
-          
+
           <div class="card">
             <div class="img-card"><img src="img/perfil-de-usuario.webp" alt=""></div>
             <div class="info-card">
               <h3>Lorem ipsum, dolor sit amet</h3>
               <p>Vote agora no seu favorito!</p>
             </div>
-            <button class="vote-btn" data-categoria="banda" data-valor="artista4">Votar</button>
+            <button class="vote-btn" data-categoria="cantor" data-valor="artista4">Votar</button>
           </div>
 
         </div>
