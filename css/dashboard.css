@@ -92,19 +92,21 @@ header img {
     margin-left: 3rem;
 }
 
-.user .username {
-    font-size: 1.2em;
-    font-weight: bold;
+.user {
+    color: #1d376b;
+    margin-left: 2rem;
+    margin-block: 1rem;
 }
 
-.user {
-    margin-left: 2rem;
+.user .username {
+    font-size: 1.3em;
+    font-weight: bold;
 }
 
 .user p {
     font-size: .9rem;
     margin-top: 1rem;
-    max-width: 40%;
+    max-width: 35%;
 }
 
 section {
@@ -187,12 +189,14 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .card .img-card img {
     width: 9rem;
-    height: auto;
+    height: 9rem;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .card .info-card {
@@ -310,7 +314,12 @@ section {
 }
 
 main .form {
-    width: 100%;
+
+    position: fixed;
+    bottom: 0;
+    right: 5vw;
+    /*
+    width: 100%;*/
     display: flex;
     flex-direction: column;
     justify-content: center;

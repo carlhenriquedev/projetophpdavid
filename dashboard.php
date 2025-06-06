@@ -2,6 +2,7 @@
 
 include_once("candidatos.php");
 
+
 session_start();
 
 if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true)) {
@@ -34,8 +35,13 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
     <img src="img/clickBest.png" alt="">
   </header>
   <div class="interface">
+
     <aside>
       <div class="aside-icons">
+        <a href="admin.php">
+          <i class="bi bi-house-gear"></i>
+          <p>Admin</p>
+        </a>
         <a href="#">
           <i class="bi bi-file-earmark-bar-graph-fill"></i>
           <p>Relatórios</p>
@@ -66,7 +72,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
             <?php foreach ($candidatos['designer'] as $candidato): ?>
               <div class="card">
                 <div class="img-card">
-                  <img src="img/perfil-de-usuario.webp" alt="">
+                  <img src="<?= htmlspecialchars($candidato['imagem']) ?>" alt="">
                 </div>
                 <div class="info-card">
                   <h3><?= htmlspecialchars($candidato['nome']) ?></h3>
@@ -95,7 +101,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
                 </div>
                 <div class="info-card">
                   <h3><?= htmlspecialchars($candidato['nome']) ?></h3>
-                  <h4 class="badge1">Front-end</h4>
+                  <h4 class="badge2">Front-end</h4>
                   <p>Vote agora no seu favorito!</p>
                 </div>
                 <button class="vote-btn" data-categoria="frontend" data-valor="<?= $candidato['id'] ?>">Selecionar</button>
@@ -120,7 +126,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
                 </div>
                 <div class="info-card">
                   <h3><?= htmlspecialchars($candidato['nome']) ?></h3>
-                  <h4 class="badge1">Back-end</h4>
+                  <h4 class="badge3">Back-end</h4>
                   <p>Vote agora no seu favorito!</p>
                 </div>
                 <button class="vote-btn" data-categoria="backend" data-valor="<?= $candidato['id'] ?>">Selecionar</button>
@@ -145,7 +151,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
                 </div>
                 <div class="info-card">
                   <h3><?= htmlspecialchars($candidato['nome']) ?></h3>
-                  <h4 class="badge1">Fullstack</h4>
+                  <h4 class="badge4">Fullstack</h4>
                   <p>Vote agora no seu favorito!</p>
                 </div>
                 <button class="vote-btn" data-categoria="fullstack" data-valor="<?= $candidato['id'] ?>">Selecionar</button>
@@ -170,7 +176,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
                 </div>
                 <div class="info-card">
                   <h3><?= htmlspecialchars($candidato['nome']) ?></h3>
-                  <h4 class="badge1">Dupla</h4>
+                  <h4 class="badge5">Dupla</h4>
                   <p>Vote agora no seu favorito!</p>
                 </div>
                 <button class="vote-btn" data-categoria="dupla" data-valor="<?= $candidato['id'] ?>">Selecionar</button>
@@ -195,7 +201,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
                 </div>
                 <div class="info-card">
                   <h3><?= htmlspecialchars($candidato['nome']) ?></h3>
-                  <h4 class="badge1">Resenha</h4>
+                  <h4 class="badge6">Resenha</h4>
                   <p>Vote agora no seu favorito!</p>
                 </div>
                 <button class="vote-btn" data-categoria="resenha" data-valor="<?= $candidato['id'] ?>">Selecionar</button>
@@ -220,7 +226,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
                 </div>
                 <div class="info-card">
                   <h3><?= htmlspecialchars($candidato['nome']) ?></h3>
-                  <h4 class="badge1">Simpático</h4>
+                  <h4 class="badge7">Simpático</h4>
                   <p>Vote agora no seu favorito!</p>
                 </div>
                 <button class="vote-btn" data-categoria="simpatico" data-valor="<?= $candidato['id'] ?>">Selecionar</button>
@@ -245,7 +251,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
                 </div>
                 <div class="info-card">
                   <h3><?= htmlspecialchars($candidato['nome']) ?></h3>
-                  <h4 class="badge1">Professor</h4>
+                  <h4 class="badge8">Professor</h4>
                   <p>Vote agora no seu favorito!</p>
                 </div>
                 <button class="vote-btn" data-categoria="professor" data-valor="<?= $candidato['id'] ?>">Selecionar</button>
@@ -256,39 +262,22 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
         </div>
       </section>
 
-
-    <form class="form" action="votes.php" method="post">
-      <div class="hiden">
-        <?php
-        $nomesInputs = [
-          'designer'   => 'design',
-          'frontend'   => 'front',
-          'backend'    => 'back',
-          'fullstack'  => 'full',
-          'dupla'      => 'duo',
-          'resenha'    => 'resenha',
-          'simpatico'  => 'genteboa',
-          'professor'  => 'professor'
-        ];
-
-        foreach ($candidatos as $categoria => $lista) {
-          $inputName = $nomesInputs[$categoria];
-          foreach ($lista as $candidato) {
-            $id = htmlspecialchars($candidato['id']);
-            $nome = htmlspecialchars($candidato['nome']);
-            echo "<input type='radio' name='$inputName' value='$id' id='{$inputName}-$id'>";
+      <form class="form" action="votes.php" method="post">
+        <div class="hiden">
+          <?php
+          foreach ($candidatos as $categoria => $lista) {
+            foreach ($lista as $candidato) {
+              $id = htmlspecialchars($candidato['id']);
+              $nome = htmlspecialchars($candidato['nome']);
+              echo "<input type='radio' name='$categoria' value='$id' id='{$categoria}-$id'>";
+            }
+            echo "<br>";
           }
-          echo "<br>";
-        }
-        ?>
-      </div>
+          ?>
+        </div>
 
-      <button type="submit" id="submit-btn">Registrar Votos</button>
-    </form>
-
-
-
-
+        <button type="submit" id="submit-btn">Registrar Votos</button>
+      </form>
 
     </main>
   </div>
