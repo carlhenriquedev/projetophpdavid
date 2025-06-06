@@ -202,7 +202,7 @@ section {
 }
 
 .card .info-card {
-    width: 90%;
+    width: 100%;
 }
 
 .card .info-card h3 {
@@ -221,8 +221,8 @@ section {
 }
 
 .card .info-card h4.badge1 {
-    color: #b22485;
-    background: #f7dff5;
+    color: #9c27b0;
+    background: #f3e5f5;
 }
 
 .card .info-card h4.badge2 {
@@ -241,9 +241,38 @@ section {
 }
 
 .card .info-card h4.badge5 {
-    color: #00f2ff;
-    background: #e6feff;
+    color: #1e8449;
+    /* Verde escuro */
+    background: #d4efdf;
+    /* Verde claro */
 }
+
+.card .info-card h4.badge6 {
+    color: #e67e22;
+    /* Laranja queimado */
+    background: #fae5d3;
+    /* Laranja claro */
+}
+
+.card .info-card h4.badge7 {
+    color: #117864;
+    /* Verde petróleo */
+    background: #d1f2eb;
+    /* Verde água claro */
+}
+
+.card .info-card h4.badge8 {
+    color: #34495e;
+    /* Azul petróleo */
+    background: #d6eaf8;
+    /* Azul claro */
+}
+
+.card .info-card h4.badge9 {
+    color: #b22485;
+    background: #f7dff5;
+}
+
 
 .card .info-card p {
     font-size: .9rem;
@@ -288,8 +317,6 @@ section {
 
 main .form {
     width: 100%;
-    position: fixed;
-    bottom: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -304,6 +331,10 @@ main .form button {
     font-size: .9rem;
     font-weight: 600;
     background-color: #1d376b;
+}
+
+main .form button:hover {
+    background-color: #1e8449;
 }
 
 footer {

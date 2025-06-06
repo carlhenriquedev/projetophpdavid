@@ -68,7 +68,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
             <div class="card">
               <div class="img-card"><img src="img/perfil-de-usuario.webp" alt=""></div>
               <div class="info-card">
-                <h3>Clara Lorem ipsum dol</h3>
+                <h3>Eduarda Elvira Alves</h3>
                 <h4 class="badge1">Designer</h4>
                 <p>Vote agora no seu favorito!</p>
               </div>
@@ -78,7 +78,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
             <div class="card">
               <div class="img-card"><img src="img/perfil-de-usuario.webp" alt=""></div>
               <div class="info-card">
-                <h3>Eduarda Elvira Alves</h3>
+                <h3>Luciana De Souza</h3>
                 <h4 class="badge1">Designer</h4>
                 <p>Vote agora no seu favorito!</p>
               </div>
@@ -88,21 +88,11 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
             <div class="card">
               <div class="img-card"><img src="img/perfil-de-usuario.webp" alt=""></div>
               <div class="info-card">
-                <h3>Luciana De Souza</h3>
-                <h4 class="badge1">Designer</h4>
-                <p>Vote agora no seu favorito!</p>
-              </div>
-              <button class="vote-btn" data-categoria="design" data-valor="designer3">Selecionar</button>
-            </div>
-
-            <div class="card">
-              <div class="img-card"><img src="img/perfil-de-usuario.webp" alt=""></div>
-              <div class="info-card">
                 <h3>Richard Wallace Lins</h3>
                 <h4 class="badge1">Designer</h4>
                 <p>Vote agora no seu favorito!</p>
               </div>
-              <button class="vote-btn" data-categoria="design" data-valor="designer4">Selecionar</button>
+              <button class="vote-btn" data-categoria="design" data-valor="designer3">Selecionar</button>
             </div>
 
           </div>
@@ -363,10 +353,10 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
 
       <section>
         <div class="titulo-categoria">
-          <h2>A mais resenha:</h2>
+          <h2>Rei da resenha:</h2>
         </div>
 
-        <div class="categoria" data-categoria="cantor">
+        <div class="categoria" data-categoria="resenha">
           <button class="carousel-btn left" onclick="scrollCarousel('left')">&#10094;</button>
 
           <div class="cards-carousel">
@@ -374,37 +364,41 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
             <div class="card">
               <div class="img-card"><img src="img/perfil-de-usuario.webp" alt=""></div>
               <div class="info-card">
-                <h3>Lorem ipsum, dolor sit amet</h3>
+                <h3>Carl Henrique Santos</h3>
+                <h4 class="badge6">Resenha</h4>
                 <p>Vote agora no seu favorito!</p>
               </div>
-              <button class="vote-btn" data-categoria="cantor" data-valor="artista1">Selecionar</button>
+              <button class="vote-btn" data-categoria="resenha" data-valor="reidaresenha1">Selecionar</button>
             </div>
 
             <div class="card">
               <div class="img-card"><img src="img/perfil-de-usuario.webp" alt=""></div>
               <div class="info-card">
-                <h3>Lorem ipsum, dolor sit amet</h3>
+                <h3>Ismael Correia Bione</h3>
+                <h4 class="badge6">Resenha</h4>
                 <p>Vote agora no seu favorito!</p>
               </div>
-              <button class="vote-btn" data-categoria="cantor" data-valor="artista2">Selecionar</button>
+              <button class="vote-btn" data-categoria="resenha" data-valor="reidaresenha2">Selecionar</button>
             </div>
 
             <div class="card">
               <div class="img-card"><img src="img/perfil-de-usuario.webp" alt=""></div>
               <div class="info-card">
-                <h3>Lorem ipsum, dolor sit amet</h3>
+                <h3>Matheus Xavier de Souza</h3>
+                <h4 class="badge6">Resenha</h4>
                 <p>Vote agora no seu favorito!</p>
               </div>
-              <button class="vote-btn" data-categoria="cantor" data-valor="artista3">Selecionar</button>
+              <button class="vote-btn" data-categoria="resenha" data-valor="reidaresenha3">Selecionar</button>
             </div>
 
             <div class="card">
               <div class="img-card"><img src="img/perfil-de-usuario.webp" alt=""></div>
               <div class="info-card">
-                <h3>Lorem ipsum, dolor sit amet</h3>
+                <h3>Richard Wallace Lins</h3>
+                <h4 class="badge6">Resenha</h4>
                 <p>Vote agora no seu favorito!</p>
               </div>
-              <button class="vote-btn" data-categoria="cantor" data-valor="artista4">Selecionar</button>
+              <button class="vote-btn" data-categoria="resenha" data-valor="reidaresenha4">Selecionar</button>
             </div>
 
           </div>
@@ -418,7 +412,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
           <h2>A mais gente boa:</h2>
         </div>
 
-        <div class="categoria" data-categoria="cantor">
+        <div class="categoria" data-categoria="genteboa">
           <button class="carousel-btn left" onclick="scrollCarousel('left')">&#10094;</button>
 
           <div class="cards-carousel">
@@ -426,37 +420,51 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
             <div class="card">
               <div class="img-card"><img src="img/perfil-de-usuario.webp" alt=""></div>
               <div class="info-card">
-                <h3>Lorem ipsum, dolor sit amet</h3>
+                <h3>Ailton Robson de Oliveira</h3>
+                <h4 class="badge7">Simpático</h4>
                 <p>Vote agora no seu favorito!</p>
               </div>
-              <button class="vote-btn" data-categoria="cantor" data-valor="artista1">Selecionar</button>
+              <button class="vote-btn" data-categoria="genteboa" data-valor="simpatico1">Selecionar</button>
             </div>
 
             <div class="card">
               <div class="img-card"><img src="img/perfil-de-usuario.webp" alt=""></div>
               <div class="info-card">
-                <h3>Lorem ipsum, dolor sit amet</h3>
+                <h3>Eduarda Elvira Alves</h3>
+                <h4 class="badge7">Simpático</h4>
                 <p>Vote agora no seu favorito!</p>
               </div>
-              <button class="vote-btn" data-categoria="cantor" data-valor="artista2">Selecionar</button>
+              <button class="vote-btn" data-categoria="genteboa" data-valor="simpatico2">Selecionar</button>
             </div>
 
             <div class="card">
               <div class="img-card"><img src="img/perfil-de-usuario.webp" alt=""></div>
               <div class="info-card">
-                <h3>Lorem ipsum, dolor sit amet</h3>
+                <h3>Hugo Gabriel Silva</h3>
+                <h4 class="badge7">Simpático</h4>
                 <p>Vote agora no seu favorito!</p>
               </div>
-              <button class="vote-btn" data-categoria="cantor" data-valor="artista3">Selecionar</button>
+              <button class="vote-btn" data-categoria="genteboa" data-valor="simpatico3">Selecionar</button>
             </div>
 
             <div class="card">
               <div class="img-card"><img src="img/perfil-de-usuario.webp" alt=""></div>
               <div class="info-card">
-                <h3>Lorem ipsum, dolor sit amet</h3>
+                <h3>Leandro Mariano Silva</h3>
+                <h4 class="badge7">Simpático</h4>
                 <p>Vote agora no seu favorito!</p>
               </div>
-              <button class="vote-btn" data-categoria="cantor" data-valor="artista4">Selecionar</button>
+              <button class="vote-btn" data-categoria="genteboa" data-valor="simpatico4">Selecionar</button>
+            </div>
+
+            <div class="card">
+              <div class="img-card"><img src="img/perfil-de-usuario.webp" alt=""></div>
+              <div class="info-card">
+                <h3>Luciana De Souza</h3>
+                <h4 class="badge7">Simpático</h4>
+                <p>Vote agora no seu favorito!</p>
+              </div>
+              <button class="vote-btn" data-categoria="genteboa" data-valor="simpatico5">Selecionar</button>
             </div>
 
           </div>
@@ -471,7 +479,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
           <h2>Melhor professor:</h2>
         </div>
 
-        <div class="categoria" data-categoria="cantor">
+        <div class="categoria" data-categoria="professor">
           <button class="carousel-btn left" onclick="scrollCarousel('left')">&#10094;</button>
 
           <div class="cards-carousel">
@@ -479,39 +487,53 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
             <div class="card">
               <div class="img-card"><img src="img/perfil-de-usuario.webp" alt=""></div>
               <div class="info-card">
-                <h3>Lorem ipsum, dolor sit amet</h3>
+                <h3>Allisson Tércio</h3>
+                <h4 class="badge8">Professor(a)</h4>
                 <p>Vote agora no seu favorito!</p>
               </div>
-              <button class="vote-btn" data-categoria="cantor" data-valor="artista1">Selecionar</button>
+              <button class="vote-btn" data-categoria="professor" data-valor="professor1">Selecionar</button>
             </div>
 
             <div class="card">
               <div class="img-card"><img src="img/perfil-de-usuario.webp" alt=""></div>
               <div class="info-card">
-                <h3>Lorem ipsum, dolor sit amet</h3>
+                <h3>David Remígio</h3>
+                <h4 class="badge8">Professor(a)</h4>
                 <p>Vote agora no seu favorito!</p>
               </div>
-              <button class="vote-btn" data-categoria="cantor" data-valor="artista2">Selecionar</button>
+              <button class="vote-btn" data-categoria="professor" data-valor="professor2">Selecionar</button>
             </div>
 
             <div class="card">
               <div class="img-card"><img src="img/perfil-de-usuario.webp" alt=""></div>
               <div class="info-card">
-                <h3>Lorem ipsum, dolor sit amet</h3>
+                <h3>Jorge</h3>
+                <h4 class="badge8">Professor(a)</h4>
                 <p>Vote agora no seu favorito!</p>
               </div>
-              <button class="vote-btn" data-categoria="cantor" data-valor="artista3">Selecionar</button>
+              <button class="vote-btn" data-categoria="professor" data-valor="professor3">Selecionar</button>
             </div>
 
             <div class="card">
               <div class="img-card"><img src="img/perfil-de-usuario.webp" alt=""></div>
               <div class="info-card">
-                <h3>Lorem ipsum, dolor sit amet</h3>
+                <h3>Luiz Carlos</h3>
+                <h4 class="badge8">Professor(a)</h4>
                 <p>Vote agora no seu favorito!</p>
               </div>
-              <button class="vote-btn" data-categoria="cantor" data-valor="artista4">Selecionar</button>
+              <button class="vote-btn" data-categoria="professor" data-valor="professor4">Selecionar</button>
             </div>
 
+            <div class="card">
+              <div class="img-card"><img src="img/perfil-de-usuario.webp" alt=""></div>
+              <div class="info-card">
+                <h3>Valéria</h3>
+                <h4 class="badge9">Professor(a)</h4>
+                <p>Vote agora no seu favorito!</p>
+              </div>
+              <button class="vote-btn" data-categoria="professor" data-valor="professor5">Selecionar</button>
+            </div>
+            
           </div>
 
           <button class="carousel-btn right" onclick="scrollCarousel('right')">&#10095;</button>
@@ -525,7 +547,6 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
           <input type="radio" name="design" value="designer1" id="design-designer1">
           <input type="radio" name="design" value="designer2" id="design-designer2">
           <input type="radio" name="design" value="designer3" id="design-designer3">
-          <input type="radio" name="design" value="designer4" id="design-designer4">
           <br>
           <input type="radio" name="front" value="frontend1" id="front-frontend1">
           <input type="radio" name="front" value="frontend2" id="front-frontend2">
@@ -544,11 +565,29 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
           <input type="radio" name="full" value="fullstack1" id="full-fullstack1">
           <input type="radio" name="full" value="fullstack2" id="full-fullstack2">
           <br>
-          <input type="radio" name="duo" value="dupla1" id="dupla1">
-          <input type="radio" name="duo" value="dupla2" id="dupla2">
-          <input type="radio" name="duo" value="dupla3" id="dupla3">
-          <input type="radio" name="duo" value="dupla4" id="dupla4">
+          <input type="radio" name="duo" value="dupla1" id="duo-dupla1">
+          <input type="radio" name="duo" value="dupla2" id="duo-dupla2">
+          <input type="radio" name="duo" value="dupla3" id="duo-dupla3">
+          <input type="radio" name="duo" value="dupla4" id="duo-dupla4">
           <br>
+          <input type="radio" name="resenha" value="reidaresenha1" id="resenha-reidaresenha1">
+          <input type="radio" name="resenha" value="reidaresenha2" id="resenha-reidaresenha2">
+          <input type="radio" name="resenha" value="reidaresenha3" id="resenha-reidaresenha3">
+          <input type="radio" name="resenha" value="reidaresenha4" id="resenha-reidaresenha4">
+          <br>
+          <input type="radio" name="genteboa" value="simpatico1" id="genteboa-simpatico1">
+          <input type="radio" name="genteboa" value="simpatico2" id="genteboa-simpatico2">
+          <input type="radio" name="genteboa" value="simpatico3" id="genteboa-simpatico3">
+          <input type="radio" name="genteboa" value="simpatico4" id="genteboa-simpatico4">
+          <input type="radio" name="genteboa" value="simpatico5" id="genteboa-simpatico5">
+          <br>
+          <input type="radio" name="professor" value="professor1" id="professor-professor1">
+          <input type="radio" name="professor" value="professor2" id="professor-professor2">
+          <input type="radio" name="professor" value="professor3" id="professor-professor3">
+          <input type="radio" name="professor" value="professor4" id="professor-professor4">
+          <input type="radio" name="professor" value="professor5" id="professor-professor5">
+
+
         </div>
 
         <button type="submit" id="submit-btn">Registrar Votos</button>

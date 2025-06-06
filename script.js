@@ -25,9 +25,11 @@ const botoes = document.querySelectorAll('.vote-btn');
         botoes.forEach(b => {
           if (b.dataset.categoria === categoria) {
             b.classList.remove('selected');
+            b.textContent = 'Selecionar';
           }
         });
 
         btn.classList.add('selected');
+        btn.textContent = 'Selecionado';
       });
     });
