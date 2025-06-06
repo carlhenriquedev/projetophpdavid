@@ -51,7 +51,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
         <span class="username">Olá, <?php echo ($_SESSION["email"]); ?>!</span>
         <p>Bem-vindo(a) ao clickBest, você poderá fazer suas votações logo abaixo. Selecione um candidato por categoria
           e
-          logo após registre seus votos no final da página.</p>
+          logo após registre seus votoss no final da página.</p>
       </div>
 
       <section>
