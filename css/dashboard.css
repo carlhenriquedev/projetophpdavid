@@ -35,12 +35,6 @@ aside {
     transition: .5s;
 }
 
-aside h2 {
-    font-size: 1.5em;
-    margin-bottom: 30px;
-    color: transparent;
-}
-
 aside .aside-icons {
     padding: 5px;
     margin-top: 1rem;
@@ -60,7 +54,7 @@ aside a {
 }
 
 aside a:hover {
-    background-color: #132849;
+    background-color: #ff4d2d;
 }
 
 aside a .bi {
@@ -284,7 +278,7 @@ section {
     font-weight: 600;
     padding: 10px;
     border: none;
-    width: 90%;
+    width: 95%;
     border-radius: 6px;
     cursor: pointer;
 }
