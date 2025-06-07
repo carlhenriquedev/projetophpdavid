@@ -11,7 +11,7 @@
     <h1><span class="orange">Login no</span> <span class="blue">clickBest</span></h1>
     <p class="subtitle">Acesse sua conta para votar nos melhores!</p>
 
-    <form action="validacao.php" method="POST" class="form">
+    <form action="subs/validacao.php" method="POST" class="form">
 
       <input type="email" name="email" placeholder="E-mail" required/>
       <input type="password" name="password_hash" placeholder="Senha" required/>

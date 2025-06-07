@@ -1,9 +1,7 @@
 <?php
 
-include_once("candidatos.php");
+include_once("subs/candidatos.php");
 
-
-session_start();
 
 if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true)) {
 
@@ -46,7 +44,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
           <i class="bi bi-file-earmark-bar-graph-fill"></i>
           <p>Relatórios</p>
         </a>
-        <a href="sair.php">
+        <a href="subs/sair.php">
           <i class="bi bi-door-closed"></i>
           <p>Logo out</p>
         </a>
@@ -262,7 +260,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
         </div>
       </section>
 
-      <form class="form" action="votes.php" method="post">
+      <form class="form" action="subs/votes.php" method="post">
         <div class="hiden">
           <?php
           foreach ($candidatos as $categoria => $lista) {
@@ -287,7 +285,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
 
 
 
-  <script src="script.js"></script>
+  <script src="scripts/dashboard.js"></script>
 </body>
 
 </html>

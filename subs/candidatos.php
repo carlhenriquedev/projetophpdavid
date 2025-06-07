@@ -1,6 +1,9 @@
 <?php
+session_start();
 
-include_once("config/connection.php");
+include_once("./config/connection.php");
+
+
 
 $candidatos = [
   'designer'   => [],
@@ -13,12 +16,12 @@ $candidatos = [
   'professor'  => []
 ];
 
-$sql = "SELECT id, nome, categoria, imagem FROM candidatos ORDER BY categoria, nome";
+$sql = "SELECT id, nome, category, imagem FROM candidates ORDER BY category, nome";
 $result = $conexao->query($sql);
 
 if ($result) {
     while ($row = $result->fetch_assoc()) {
-        $categoria = $row['categoria'];
+        $categoria = $row['category'];
         if (isset($candidatos[$categoria])) {
             $candidatos[$categoria][] = [
                 'id'     => $row['id'],

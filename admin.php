@@ -1,6 +1,6 @@
 <?php
 
-include_once("candidatos.php");
+include_once("subs/candidatos.php");
 
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
   move_uploaded_file($_FILES["foto"]["tmp_name"], $caminhoFinal);
 
-  $stmt = $conexao->prepare("INSERT INTO candidatos (nome, categoria, imagem) VALUES (?, ?, ?)");
+  $stmt = $conexao->prepare("INSERT INTO candidates (nome, category, imagem) VALUES (?, ?, ?)");
   $stmt->bind_param("sss", $nome, $categoria, $caminhoFinal);
 
   if ($stmt->execute()) {
