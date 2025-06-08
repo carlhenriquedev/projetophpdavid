@@ -4,6 +4,18 @@ include_once("subs/candidatos.php");
 
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+  if (isset($_POST['delete_id'])) {
+    $idRemover = $_POST['delete_id'];
+
+    $stmt = $conexao->prepare("UPDATE candidates SET removed_at = NOW() WHERE id = ?");
+    $stmt->bind_param("i", $idRemover);
+    $stmt->execute();
+    $stmt->close();
+  }
+
+
+
   $nome = $_POST["nome"];
   $categoria = $_POST["categoria"];
 
@@ -30,8 +42,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $stmt->close();
 
 }
-
-$conexao->close();
 ?>
 
 
@@ -40,13 +50,21 @@ $conexao->close();
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/admin.css">
+
   <title>Admin</title>
 </head>
 <body>
 
-  <form action="admin.php" method="post" enctype="multipart/form-data">
-    <input type="text" name="nome" placeholder="Nome do candidato" required>
-    
+<header>
+  <h1>Admin - clickBest</h1>
+</header>
+
+<div class="container">
+
+  <form class="add" action="admin.php" method="post" enctype="multipart/form-data">
+    <h2>Adicionar candidatos:</h2>
+    <input type="text" name="nome" placeholder="Nome do candidato" maxlength="35" required>
     <select name="categoria" required>
       <option value="designer">Designer</option>
       <option value="frontend">Frontend</option>
@@ -61,7 +79,31 @@ $conexao->close();
     <input type="file" name="foto" accept="image/*" required>
     <button type="submit">Cadastrar</button>
   </form>
+
   
+  <div class="candidatos-lista">
+    <h2>Candidatos Cadastrados</h2>
+    
+    <?php
+      $resultado = $conexao->query("SELECT * FROM candidates WHERE removed_at IS NULL");
+
+      while ($candidato = $resultado->fetch_assoc()) {
+        echo "<div class='card'>";
+        echo "<img src='{$candidato['imagem']}' alt='' onerror=\"this.onerror=null; this.src='uploads/user0.webp';\">";
+        echo "<p><strong>{$candidato['nome']}</strong> ({$candidato['category']})</p>";
+        echo "<form method='post' onsubmit=\"return confirm('Tem certeza que deseja remover este candidato?');\">";
+        echo "<input type='hidden' name='delete_id' value='{$candidato['id']}'>";
+        echo "<button type='submit'>Remover</button>";
+        echo "</form>";
+        echo "</div>";
+      }
+      $conexao->close();
+    ?>
+  </div>
+
+</div>
+
+  
+
 </body>
 </html>
-

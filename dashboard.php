@@ -40,7 +40,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
           <i class="bi bi-house-gear"></i>
           <p>Admin</p>
         </a>
-        <a href="#">
+        <a href="relatorios.php">
           <i class="bi bi-file-earmark-bar-graph-fill"></i>
           <p>Relatórios</p>
         </a>
@@ -70,7 +70,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
             <?php foreach ($candidatos['designer'] as $candidato): ?>
               <div class="card">
                 <div class="img-card">
-                  <img src="<?= htmlspecialchars($candidato['imagem']) ?>" alt="">
+                  <img src="<?= htmlspecialchars($candidato['imagem']) ?>" onerror="this.onerror=null; this.src='uploads/user0.webp';">
                 </div>
                 <div class="info-card">
                   <h3><?= htmlspecialchars($candidato['nome']) ?></h3>
@@ -95,7 +95,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
             <?php foreach ($candidatos['frontend'] as $candidato): ?>
               <div class="card">
                 <div class="img-card">
-                  <img src="img/perfil-de-usuario.webp" alt="">
+                  <img src="<?= htmlspecialchars($candidato['imagem']) ?>" onerror="this.onerror=null; this.src='uploads/user0.webp';">
                 </div>
                 <div class="info-card">
                   <h3><?= htmlspecialchars($candidato['nome']) ?></h3>
@@ -120,7 +120,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
             <?php foreach ($candidatos['backend'] as $candidato): ?>
               <div class="card">
                 <div class="img-card">
-                  <img src="img/perfil-de-usuario.webp" alt="">
+                  <img src="<?= htmlspecialchars($candidato['imagem']) ?>" onerror="this.onerror=null; this.src='uploads/user0.webp';">
                 </div>
                 <div class="info-card">
                   <h3><?= htmlspecialchars($candidato['nome']) ?></h3>
@@ -145,7 +145,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
             <?php foreach ($candidatos['fullstack'] as $candidato): ?>
               <div class="card">
                 <div class="img-card">
-                  <img src="img/perfil-de-usuario.webp" alt="">
+                  <img src="<?= htmlspecialchars($candidato['imagem']) ?>" onerror="this.onerror=null; this.src='uploads/user0.webp';">
                 </div>
                 <div class="info-card">
                   <h3><?= htmlspecialchars($candidato['nome']) ?></h3>
@@ -170,7 +170,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
             <?php foreach ($candidatos['dupla'] as $candidato): ?>
               <div class="card">
                 <div class="img-card">
-                  <img src="img/perfil-de-usuario.webp" alt="">
+                  <img src="<?= htmlspecialchars($candidato['imagem']) ?>" onerror="this.onerror=null; this.src='uploads/user0.webp';">
                 </div>
                 <div class="info-card">
                   <h3><?= htmlspecialchars($candidato['nome']) ?></h3>
@@ -195,7 +195,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
             <?php foreach ($candidatos['resenha'] as $candidato): ?>
               <div class="card">
                 <div class="img-card">
-                  <img src="img/perfil-de-usuario.webp" alt="">
+                  <img src="<?= htmlspecialchars($candidato['imagem']) ?>" onerror="this.onerror=null; this.src='uploads/user0.webp';">
                 </div>
                 <div class="info-card">
                   <h3><?= htmlspecialchars($candidato['nome']) ?></h3>
@@ -220,7 +220,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
             <?php foreach ($candidatos['simpatico'] as $candidato): ?>
               <div class="card">
                 <div class="img-card">
-                  <img src="img/perfil-de-usuario.webp" alt="">
+                  <img src="<?= htmlspecialchars($candidato['imagem']) ?>" onerror="this.onerror=null; this.src='uploads/user0.webp';">
                 </div>
                 <div class="info-card">
                   <h3><?= htmlspecialchars($candidato['nome']) ?></h3>
@@ -245,7 +245,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
             <?php foreach ($candidatos['professor'] as $candidato): ?>
               <div class="card">
                 <div class="img-card">
-                  <img src="img/perfil-de-usuario.webp" alt="">
+                  <img src="<?= htmlspecialchars($candidato['imagem']) ?>" onerror="this.onerror=null; this.src='uploads/user0.webp';">
                 </div>
                 <div class="info-card">
                   <h3><?= htmlspecialchars($candidato['nome']) ?></h3>
