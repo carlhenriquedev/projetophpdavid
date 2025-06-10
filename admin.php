@@ -40,13 +40,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     echo "Erro ao salvar no banco: " . $stmt->error;
   }
   $stmt->close();
-
 }
 ?>
 
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,37 +54,38 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
   <title>Admin</title>
 </head>
+
 <body>
 
-<header>
-  <h1>Admin - clickBest</h1>
-</header>
+  <header>
+    <h1>Admin - clickBest</h1>
+  </header>
 
-<div class="container">
+  <div class="container">
 
-  <form class="add" action="admin.php" method="post" enctype="multipart/form-data">
-    <h2>Adicionar candidatos:</h2>
-    <input type="text" name="nome" placeholder="Nome do candidato" maxlength="35" required>
-    <select name="categoria" required>
-      <option value="designer">Designer</option>
-      <option value="frontend">Frontend</option>
-      <option value="backend">Backend</option>
-      <option value="fullstack">Fullstack</option>
-      <option value="dupla">Dupla</option>
-      <option value="resenha">Resenha</option>
-      <option value="simpatico">Simpático</option>
-      <option value="professor">Professor</option>
-    </select>
-    
-    <input type="file" name="foto" accept="image/*" required>
-    <button type="submit">Cadastrar</button>
-  </form>
+    <form class="add" action="admin.php" method="post" enctype="multipart/form-data">
+      <h2>Adicionar candidatos:</h2>
+      <input type="text" name="nome" placeholder="Nome do candidato" maxlength="35" required>
+      <select name="categoria" required>
+        <option value="designer">Designer</option>
+        <option value="frontend">Frontend</option>
+        <option value="backend">Backend</option>
+        <option value="fullstack">Fullstack</option>
+        <option value="dupla">Dupla</option>
+        <option value="resenha">Resenha</option>
+        <option value="simpatico">Simpático</option>
+        <option value="professor">Professor</option>
+      </select>
 
-  
-  <div class="candidatos-lista">
-    <h2>Candidatos Cadastrados</h2>
-    
-    <?php
+      <input type="file" name="foto" accept="image/*" required>
+      <button type="submit">Cadastrar</button>
+    </form>
+
+
+    <div class="candidatos-lista">
+      <h2>Candidatos Cadastrados</h2>
+
+      <?php
       $resultado = $conexao->query("SELECT * FROM candidates WHERE removed_at IS NULL");
 
       while ($candidato = $resultado->fetch_assoc()) {
@@ -98,12 +99,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         echo "</div>";
       }
       $conexao->close();
-    ?>
+      ?>
+    </div>
+
   </div>
 
-</div>
 
-  
 
 </body>
+
 </html>

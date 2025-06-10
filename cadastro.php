@@ -1,27 +1,29 @@
 <?php
 
-    if (isset($_POST['submit'])) {
+if (isset($_POST['submit'])) {
 
-        include("config/connection.php");
+  include("config/connection.php");
 
-        $name = $_POST["username"];
-        $email = $_POST["email"];
-        $password = $_POST["password_hash"];
+  $name = $_POST["username"];
+  $email = $_POST["email"];
+  $password = $_POST["password_hash"];
 
-        $result = mysqli_query( $conexao, "INSERT INTO users(username, email, password_hash)
+  $result = mysqli_query($conexao, "INSERT INTO users(username, email, password_hash)
         VALUES ('$name', '$email', '$password')");
-    }
+}
 
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cadastro - clickBest</title>
-  <link rel="stylesheet" href="css/cadastro.css"/>
+  <link rel="stylesheet" href="css/cadastro.css" />
 </head>
+
 <body>
   <main class="form-container">
     <h1><span class="orange">Cadastro no</span> <span class="blue">clickBest</span></h1>
@@ -37,4 +39,5 @@
     <p class="login-redirect">Já tem conta? <a href="login.php">Entrar</a></p>
   </main>
 </body>
+
 </html>

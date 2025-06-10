@@ -1,11 +1,12 @@
 <?php
 
-  include_once("config/connection.php");
+include_once("config/connection.php");
 
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,10 +14,11 @@
   <title>ClickBest - Sistema de Votação</title>
 
 </head>
+
 <body>
 
   <header>
-    <img src="img/clickBest.png" alt="ClickBest Logo"/>
+    <img src="img/clickBest.png" alt="ClickBest Logo" />
     <nav>
       <a href="#">Sobre</a>
       <a href="#">Serviços</a>
@@ -35,8 +37,9 @@
         <a href="login.php">Login</a>
       </div>
     </div>
-    
+
   </div>
 
 </body>
+
 </html>

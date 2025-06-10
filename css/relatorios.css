@@ -24,7 +24,7 @@ header h1 {
 }
 
 .relatorio-section {
-    margin-bottom: 7rem;
+  margin-bottom: 7rem;
 }
 
 .relatorio-title {
@@ -50,8 +50,8 @@ header h1 {
 }
 
 .candidato-box {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .card p {

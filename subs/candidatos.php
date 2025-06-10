@@ -6,14 +6,14 @@ include_once("./config/connection.php");
 
 
 $candidatos = [
-  'designer'   => [],
-  'frontend'   => [],
-  'backend'    => [],
-  'fullstack'  => [],
-  'dupla'      => [],
-  'resenha'    => [],
-  'simpatico'  => [],
-  'professor'  => []
+    'designer'   => [],
+    'frontend'   => [],
+    'backend'    => [],
+    'fullstack'  => [],
+    'dupla'      => [],
+    'resenha'    => [],
+    'simpatico'  => [],
+    'professor'  => []
 ];
 
 $sql = "SELECT id, nome, category, imagem FROM candidates ORDER BY category, nome";
@@ -33,5 +33,3 @@ if ($result) {
 } else {
     echo "Erro na consulta: " . $conexao->error;
 }
-
-?>
