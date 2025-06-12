@@ -18,7 +18,7 @@ include_once("config/connection.php");
 <body>
 
   <header>
-    <img src="img/clickBest.png" alt="ClickBest Logo" />
+    <img src="img/clickBest2.svg" alt="ClickBest Logo" />
     <nav>
       <a href="#">Sobre</a>
       <a href="#">Serviços</a>

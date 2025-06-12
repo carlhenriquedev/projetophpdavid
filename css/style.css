@@ -18,7 +18,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 8rem;
+    padding: 0 6rem;
     position: fixed;
     top: 0;
     z-index: 10;
@@ -26,8 +26,8 @@ header {
 }
 
 header img {
-    width: 100px;
-    height: 100px;
+    width: 180px;
+    height: 90px;
 }
 
 nav a {

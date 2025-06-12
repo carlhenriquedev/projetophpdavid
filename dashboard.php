@@ -30,7 +30,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
 
 <body>
   <header>
-    <img src="img/clickBest.png" alt="">
+    <img src="img/clickBest2.svg" alt="">
   </header>
   <div class="interface">
 
