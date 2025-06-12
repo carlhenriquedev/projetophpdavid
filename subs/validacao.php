@@ -22,12 +22,14 @@ if (isset($_POST['submit']) && empty($_POST['email']) && empty($_POST['password_
         unset($_SESSION["id"]);
         unset($_SESSION["email"]);
         unset($_SESSION["password_hash"]);
+        unset($_SESSION["is_admin"]);
         header("Location: ../login.php");
     } else {
 
         $_SESSION["email"] = $email;
         $_SESSION["password_hash"] = $password;
         $_SESSION["id"] = $usuario["id"];
+        $_SESSION["is_admin"] = $usuario["is_admin"]; 
         header("Location: ../dashboard.php");
     }
 }

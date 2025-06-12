@@ -2,6 +2,16 @@
 
 include_once("subs/candidatos.php");
 
+echo '<pre>';
+print_r($_SESSION);
+echo '</pre>';
+
+
+if ($_SESSION["is_admin"] != 1) {
+  echo "<p style='color: red; text-align: center; margin-top: 20px;'>Acesso negado: você não tem permissão para acessar esta área.</p>";
+  exit;
+}
+
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 

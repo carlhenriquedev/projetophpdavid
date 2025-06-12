@@ -350,16 +350,100 @@ footer p {
 }
 
 @media (max-width: 768px) {
-
-    main {
-        padding: 20px;
+    aside {
+        position: fixed;
+        bottom: 0;
+        top: auto;
+        left: 0;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 1rem;
+        padding: 0.5rem 0;
     }
 
-    .carousel-btn {
-        display: none;
+    aside .aside-icons {
+        flex-direction: row;
+        margin-top: 0;
+        padding: 0;
+        gap: 0.5rem;
+    }
+
+    aside a {
+        flex-direction: column;
+        gap: 0.2rem;
+        padding: 0.5rem;
+    }
+
+    aside a p {
+        display: block;
+        font-size: 0.7rem;
+    }
+
+    main {
+        margin-inline: 1rem;
+        margin-bottom: 70px;
+    }
+
+    header {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    header img {
+        margin-left: 0;
+        width: 80px;
+    }
+
+    .user {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .user p {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    section {
+        margin-top: 1rem;
+        padding: 0.5rem;
+    }
+
+    .categoria {
+        width: 100%;
     }
 
     .cards-carousel {
-        padding: 0 10px;
+        margin-inline: 1rem;
+    }
+
+    .carousel-btn {
+        font-size: 2rem;
+        padding: 6px 10px;
+    }
+
+    .card {
+        width: 15rem;
+        height: auto;
+        padding: 12px;
+    }
+
+    .card .img-card img {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    main .form {
+        position: static;
+        margin: 2rem auto;
+    }
+
+    main .form button {
+        width: 100%;
     }
 }
