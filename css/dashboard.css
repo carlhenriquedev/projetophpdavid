@@ -11,6 +11,7 @@
 
 body {
     background-color: #ececf8;
+    overflow-x: hidden;
 }
 
 .interface {
@@ -28,7 +29,7 @@ aside {
     flex-direction: column;
     gap: 20px;
     border-bottom-right-radius: 1rem;
-    z-index: 1;
+    z-index: 2;
     position: fixed;
     top: 0;
     left: 0;
@@ -114,8 +115,7 @@ section {
     margin-top: 3rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
 }
 
 .titulo-categoria {
@@ -126,53 +126,31 @@ section {
 
 .categoria {
     position: relative;
-    width: 85%;
+    width: 100%;
     max-width: 1150px;
-    overflow: hidden;
+    padding: 0 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .cards-carousel {
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
-    gap: 20px;
-    padding: 10px;
+    gap: 1rem;
+    padding: 10px 1rem;
     margin-inline: 5rem;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
 }
 
-.cards-carousel .card {
+.card {
     flex: 0 0 auto;
     scroll-snap-align: start;
-}
-
-.cards-carousel::before,
-.cards-carousel::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 50px;
-    height: 100%;
-    z-index: 1;
-    pointer-events: none;
-}
-
-.cards-carousel::before {
-    left: 60px;
-    background: linear-gradient(to right, #ececf8 0%, transparent 100%);
-}
-
-.cards-carousel::after {
-    right: 70px;
-    background: linear-gradient(to left, #ececf8 0%, transparent 100%);
-}
-
-.card {
     width: 18rem;
+    min-width: 18rem;
     height: 21rem;
     background-color: #fff;
     border-radius: 12px;
@@ -240,30 +218,22 @@ section {
 
 .card .info-card h4.badge5 {
     color: #1e8449;
-    /* Verde escuro */
     background: #d4efdf;
-    /* Verde claro */
 }
 
 .card .info-card h4.badge6 {
     color: #e67e22;
-    /* Laranja queimado */
     background: #fae5d3;
-    /* Laranja claro */
 }
 
 .card .info-card h4.badge7 {
     color: #117864;
-    /* Verde petróleo */
     background: #d1f2eb;
-    /* Verde água claro */
 }
 
 .card .info-card h4.badge8 {
     color: #34495e;
-    /* Azul petróleo */
     background: #d6eaf8;
-    /* Azul claro */
 }
 
 .card .info-card h4.badge9 {
@@ -350,100 +320,15 @@ footer p {
 }
 
 @media (max-width: 768px) {
-    aside {
-        position: fixed;
-        bottom: 0;
-        top: auto;
-        left: 0;
-        width: 100%;
-        height: auto;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        border-bottom-right-radius: 0;
-        border-top-right-radius: 1rem;
-        padding: 0.5rem 0;
-    }
+  .card {
+    width: 14rem;
+    min-width: 14rem;
+  }
+}
 
-    aside .aside-icons {
-        flex-direction: row;
-        margin-top: 0;
-        padding: 0;
-        gap: 0.5rem;
-    }
-
-    aside a {
-        flex-direction: column;
-        gap: 0.2rem;
-        padding: 0.5rem;
-    }
-
-    aside a p {
-        display: block;
-        font-size: 0.7rem;
-    }
-
-    main {
-        margin-inline: 1rem;
-        margin-bottom: 70px;
-    }
-
-    header {
-        flex-direction: column;
-        height: auto;
-        text-align: center;
-    }
-
-    header img {
-        margin-left: 0;
-        width: 80px;
-    }
-
-    .user {
-        margin-left: 0;
-        text-align: center;
-    }
-
-    .user p {
-        max-width: 90%;
-        margin: 0 auto;
-    }
-
-    section {
-        margin-top: 1rem;
-        padding: 0.5rem;
-    }
-
-    .categoria {
-        width: 100%;
-    }
-
-    .cards-carousel {
-        margin-inline: 1rem;
-    }
-
-    .carousel-btn {
-        font-size: 2rem;
-        padding: 6px 10px;
-    }
-
-    .card {
-        width: 15rem;
-        height: auto;
-        padding: 12px;
-    }
-
-    .card .img-card img {
-        width: 7rem;
-        height: 7rem;
-    }
-
-    main .form {
-        position: static;
-        margin: 2rem auto;
-    }
-
-    main .form button {
-        width: 100%;
-    }
+@media (max-width: 480px) {
+  .card {
+    width: 12rem;
+    min-width: 12rem;
+  }
 }

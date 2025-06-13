@@ -64,8 +64,11 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
         <div class="titulo-categoria">
           <h2>Melhor designer:</h2>
         </div>
+
         <div class="categoria" data-categoria="designer">
+
           <button class="carousel-btn left" onclick="scrollCarousel('left')">&#10094;</button>
+
           <div class="cards-carousel">
             <?php foreach ($candidatos['designer'] as $candidato): ?>
               <div class="card">
@@ -81,7 +84,9 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
               </div>
             <?php endforeach; ?>
           </div>
+
           <button class="carousel-btn right" onclick="scrollCarousel('right')">&#10095;</button>
+          
         </div>
       </section>
 
