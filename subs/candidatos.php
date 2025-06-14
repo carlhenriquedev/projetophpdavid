@@ -16,7 +16,7 @@ $candidatos = [
     'professor'  => []
 ];
 
-$sql = "SELECT id, nome, category, imagem FROM candidates ORDER BY category, nome";
+$sql = "SELECT id, nome, category, imagem FROM candidates WHERE removed_at IS NULL ORDER BY category, nome";
 $result = $conexao->query($sql);
 
 if ($result) {

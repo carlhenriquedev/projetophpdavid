@@ -12,18 +12,17 @@ if ($_SESSION["is_admin"] != 1) {
   exit;
 }
 
+if (isset($_POST['delete_id'])) {
+  $idRemover = $_POST['delete_id'];
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
+  $stmt1 = $conexao->prepare("UPDATE candidates SET removed_at = NOW() WHERE id = ?");
+  $stmt1->bind_param("i", $idRemover);
+  $stmt1->execute();
+  $stmt1->close();
+}
 
-  if (isset($_POST['delete_id'])) {
-    $idRemover = $_POST['delete_id'];
 
-    $stmt = $conexao->prepare("UPDATE candidates SET removed_at = NOW() WHERE id = ?");
-    $stmt->bind_param("i", $idRemover);
-    $stmt->execute();
-    $stmt->close();
-  }
-
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["add_candidato"])) {
 
 
   $nome = $_POST["nome"];
@@ -41,15 +40,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
   move_uploaded_file($_FILES["foto"]["tmp_name"], $caminhoFinal);
 
-  $stmt = $conexao->prepare("INSERT INTO candidates (nome, category, imagem) VALUES (?, ?, ?)");
-  $stmt->bind_param("sss", $nome, $categoria, $caminhoFinal);
+  $stmt2 = $conexao->prepare("INSERT INTO candidates (nome, category, imagem) VALUES (?, ?, ?)");
+  $stmt2->bind_param("sss", $nome, $categoria, $caminhoFinal);
 
-  if ($stmt->execute()) {
+  if ($stmt2->execute()) {
     echo "Candidato cadastrado com sucesso!";
+    header("Location: admin.php?success=1");
   } else {
-    echo "Erro ao salvar no banco: " . $stmt->error;
+    echo "Erro ao salvar no banco: " . $stmt2->error;
   }
-  $stmt->close();
+  $stmt2->close();
 }
 ?>
 
@@ -88,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       </select>
 
       <input type="file" name="foto" accept="image/*" required>
-      <button type="submit">Cadastrar</button>
+      <button type="submit" name="add_candidato">Cadastrar</button>
     </form>
 
 
