@@ -67,7 +67,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
 
         <div class="categoria" data-categoria="designer">
 
-          <button class="carousel-btn left" onclick="scrollCarousel('left')">&#10094;</button>
+          <button class="carousel-btn left" onclick="scrollCarousel('left', this)">&#10094;</button>
 
           <div class="cards-carousel">
             <?php foreach ($candidatos['designer'] as $candidato): ?>
@@ -85,7 +85,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
             <?php endforeach; ?>
           </div>
 
-          <button class="carousel-btn right" onclick="scrollCarousel('right')">&#10095;</button>
+          <button class="carousel-btn right" onclick="scrollCarousel('right', this)">&#10095;</button>
           
         </div>
       </section>
@@ -95,7 +95,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
           <h2>Melhor Front-end:</h2>
         </div>
         <div class="categoria" data-categoria="frontend">
-          <button class="carousel-btn left" onclick="scrollCarousel('left')">&#10094;</button>
+          <button class="carousel-btn left" onclick="scrollCarousel('left', this)">&#10094;</button>
           <div class="cards-carousel">
             <?php foreach ($candidatos['frontend'] as $candidato): ?>
               <div class="card">
@@ -111,7 +111,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
               </div>
             <?php endforeach; ?>
           </div>
-          <button class="carousel-btn right" onclick="scrollCarousel('right')">&#10095;</button>
+          <button class="carousel-btn right" onclick="scrollCarousel('right', this)">&#10095;</button>
         </div>
       </section>
 
@@ -120,7 +120,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
           <h2>Melhor Back-end:</h2>
         </div>
         <div class="categoria" data-categoria="backend">
-          <button class="carousel-btn left" onclick="scrollCarousel('left')">&#10094;</button>
+          <button class="carousel-btn left" onclick="scrollCarousel('left', this)">&#10094;</button>
           <div class="cards-carousel">
             <?php foreach ($candidatos['backend'] as $candidato): ?>
               <div class="card">
@@ -136,7 +136,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
               </div>
             <?php endforeach; ?>
           </div>
-          <button class="carousel-btn right" onclick="scrollCarousel('right')">&#10095;</button>
+          <button class="carousel-btn right" onclick="scrollCarousel('right', this)">&#10095;</button>
         </div>
       </section>
 
@@ -145,7 +145,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
           <h2>Melhor Fullstack:</h2>
         </div>
         <div class="categoria" data-categoria="fullstack">
-          <button class="carousel-btn left" onclick="scrollCarousel('left')">&#10094;</button>
+          <button class="carousel-btn left" onclick="scrollCarousel('left', this)">&#10094;</button>
           <div class="cards-carousel">
             <?php foreach ($candidatos['fullstack'] as $candidato): ?>
               <div class="card">
@@ -161,7 +161,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
               </div>
             <?php endforeach; ?>
           </div>
-          <button class="carousel-btn right" onclick="scrollCarousel('right')">&#10095;</button>
+          <button class="carousel-btn right" onclick="scrollCarousel('right', this)">&#10095;</button>
         </div>
       </section>
 
@@ -170,7 +170,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
           <h2>Melhor Dupla:</h2>
         </div>
         <div class="categoria" data-categoria="dupla">
-          <button class="carousel-btn left" onclick="scrollCarousel('left')">&#10094;</button>
+          <button class="carousel-btn left" onclick="scrollCarousel('left', this)">&#10094;</button>
           <div class="cards-carousel">
             <?php foreach ($candidatos['dupla'] as $candidato): ?>
               <div class="card">
@@ -186,7 +186,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
               </div>
             <?php endforeach; ?>
           </div>
-          <button class="carousel-btn right" onclick="scrollCarousel('right')">&#10095;</button>
+          <button class="carousel-btn right" onclick="scrollCarousel('right', this)">&#10095;</button>
         </div>
       </section>
 
@@ -195,7 +195,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
           <h2>Mais Resenha:</h2>
         </div>
         <div class="categoria" data-categoria="resenha">
-          <button class="carousel-btn left" onclick="scrollCarousel('left')">&#10094;</button>
+          <button class="carousel-btn left" onclick="scrollCarousel('left', this)">&#10094;</button>
           <div class="cards-carousel">
             <?php foreach ($candidatos['resenha'] as $candidato): ?>
               <div class="card">
@@ -211,7 +211,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
               </div>
             <?php endforeach; ?>
           </div>
-          <button class="carousel-btn right" onclick="scrollCarousel('right')">&#10095;</button>
+          <button class="carousel-btn right" onclick="scrollCarousel('right', this)">&#10095;</button>
         </div>
       </section>
 
@@ -220,7 +220,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
           <h2>Mais Simpático:</h2>
         </div>
         <div class="categoria" data-categoria="simpatico">
-          <button class="carousel-btn left" onclick="scrollCarousel('left')">&#10094;</button>
+          <button class="carousel-btn left" onclick="scrollCarousel('left', this)">&#10094;</button>
           <div class="cards-carousel">
             <?php foreach ($candidatos['simpatico'] as $candidato): ?>
               <div class="card">
@@ -236,7 +236,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
               </div>
             <?php endforeach; ?>
           </div>
-          <button class="carousel-btn right" onclick="scrollCarousel('right')">&#10095;</button>
+          <button class="carousel-btn right" onclick="scrollCarousel('right', this)">&#10095;</button>
         </div>
       </section>
 
@@ -245,7 +245,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
           <h2>Melhor Professor:</h2>
         </div>
         <div class="categoria" data-categoria="professor">
-          <button class="carousel-btn left" onclick="scrollCarousel('left')">&#10094;</button>
+          <button class="carousel-btn left" onclick="scrollCarousel('left', this)">&#10094;</button>
           <div class="cards-carousel">
             <?php foreach ($candidatos['professor'] as $candidato): ?>
               <div class="card">
@@ -261,7 +261,7 @@ if (!isset($_SESSION["senha"]) == true and (!isset($_SESSION["email"]) == true))
               </div>
             <?php endforeach; ?>
           </div>
-          <button class="carousel-btn right" onclick="scrollCarousel('right')">&#10095;</button>
+          <button class="carousel-btn right" onclick="scrollCarousel('right', this)">&#10095;</button>
         </div>
       </section>
 

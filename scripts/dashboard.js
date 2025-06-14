@@ -1,13 +1,48 @@
-function scrollCarousel(direction) {
-    const carousel = document.querySelector('.cards-carousel');
-    const scrollAmount = 300;
+function scrollCarousel(direction, button) {
+  const carousel = button.parentElement.querySelector('.cards-carousel');
+  const scrollAmount = 300;
 
-    if (direction === 'left') {
-        carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-    } else {
-        carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
+  if (direction === 'left') {
+    carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  } else {
+    carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const carousels = document.querySelectorAll(".cards-carousel");
+
+  carousels.forEach(carousel => {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    carousel.addEventListener("mousedown", (e) => {
+      isDown = true;
+      carousel.classList.add("dragging");
+      startX = e.pageX - carousel.offsetLeft;
+      scrollLeft = carousel.scrollLeft;
+    });
+
+    carousel.addEventListener("mouseleave", () => {
+      isDown = false;
+      carousel.classList.remove("dragging");
+    });
+
+    carousel.addEventListener("mouseup", () => {
+      isDown = false;
+      carousel.classList.remove("dragging");
+    });
+
+    carousel.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - carousel.offsetLeft;
+      const walk = (x - startX) * 1.5; // Velocidade do arrasto
+      carousel.scrollLeft = scrollLeft - walk;
+    });
+  });
+});
 
 const botoes = document.querySelectorAll('.vote-btn');
 
