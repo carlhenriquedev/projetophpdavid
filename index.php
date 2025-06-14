@@ -22,7 +22,7 @@ include_once("config/connection.php");
     <nav>
       <a href="#">Sobre</a>
       <a href="#">Serviços</a>
-      <a href="#">Contatos</a>
+      <a href="#">Contato</a>
     </nav>
   </header>
 
