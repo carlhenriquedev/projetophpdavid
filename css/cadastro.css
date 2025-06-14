@@ -44,6 +44,11 @@ h1 {
   margin-bottom: 15px;
 }
 
+.form-container .form p {
+  color: red;
+  font-size: 1rem;
+}
+
 .form {
   display: flex;
   flex-direction: column;
