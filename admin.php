@@ -2,12 +2,8 @@
 
 include_once("subs/candidatos.php");
 
-echo '<pre>';
-print_r($_SESSION);
-echo '</pre>';
-
-
 if ($_SESSION["is_admin"] != 1) {
+  echo "<a href='dashboard.php'>voltar</a>";
   echo "<p style='color: red; text-align: center; margin-top: 20px;'>Acesso negado: você não tem permissão para acessar esta área.</p>";
   exit;
 }
@@ -44,7 +40,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["add_candidato"])) {
   $stmt2->bind_param("sss", $nome, $categoria, $caminhoFinal);
 
   if ($stmt2->execute()) {
-    echo "Candidato cadastrado com sucesso!";
     header("Location: admin.php?success=1");
   } else {
     echo "Erro ao salvar no banco: " . $stmt2->error;
@@ -61,6 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["add_candidato"])) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
   <title>Admin</title>
 </head>
@@ -68,6 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["add_candidato"])) {
 <body>
 
   <header>
+    <a class="voltar" href="dashboard.php"><i class="bi bi-arrow-left"></i></a>
     <h1>Admin - clickBest</h1>
   </header>
 
@@ -89,6 +86,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["add_candidato"])) {
 
       <input type="file" name="foto" accept="image/*" required>
       <button type="submit" name="add_candidato">Cadastrar</button>
+      <?php
+      if(isset($_GET["success"])){
+        echo "<div class='mensagem-box'><p class='mensagem'>Usuário cadastrado com sucesso!</p></div>";
+      }
+      ?>
     </form>
 
 

@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!isDown) return;
       e.preventDefault();
       const x = e.pageX - carousel.offsetLeft;
-      const walk = (x - startX) * 1.5; // Velocidade do arrasto
+      const walk = (x - startX) * 1.5;
       carousel.scrollLeft = scrollLeft - walk;
     });
   });
@@ -68,3 +68,12 @@ const botoes = document.querySelectorAll('.vote-btn');
         btn.textContent = 'Selecionado';
       });
     });
+
+document.getElementById("form-votacao").addEventListener("submit", function (e) {
+  const algumSelecionado = document.querySelector("input[type=radio]:checked");
+
+  if (!algumSelecionado) {
+    e.preventDefault();
+    alert("Selecione pelo menos um voto antes de enviar.");
+  }
+});

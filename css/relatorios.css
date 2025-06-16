@@ -10,6 +10,31 @@ header {
   padding: 20px;
   text-align: center;
   color: #fff;
+  position: relative;
+}
+
+.voltar{
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.voltar .bi {
+  width: 30px;
+  height: 30px;
+  font-size: 1.2rem;
+  border: #fff 2px solid;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.voltar .bi:hover{
+  color: #1e3c72;
+  background-color: #fff;
 }
 
 header h1 {

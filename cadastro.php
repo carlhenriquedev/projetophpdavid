@@ -44,11 +44,14 @@ if (isset($_POST['submit'])) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cadastro - clickBest</title>
-  <link rel="stylesheet" href="css/cadastro.css" />
+  <link rel="stylesheet" href="css/cadastro.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
 </head>
 
 <body>
   <main class="form-container">
+    <a class="voltar" href="index.php"><i class="bi bi-arrow-left"></i></a>
     <h1><span class="orange">Cadastro no</span> <span class="blue">clickBest</span></h1>
     <p class="subtitle">Preencha os dados abaixo para criar sua conta.</p>
 
@@ -59,7 +62,7 @@ if (isset($_POST['submit'])) {
       <?php
 
       if (!empty($mensagem)) {
-        echo "<p class='mensagem'>$mensagem</p>";
+        echo "<div class='mensagem-box'><p class='mensagem'>$mensagem</p></div>";
       }
 
       ?>

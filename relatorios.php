@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <title>Relatório de Votação - ClickBest</title>
     <link rel="stylesheet" href="css/relatorios.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
 </head>
 
 <body>
 
     <header>
+        <a class="voltar" href="dashboard.php"><i class="bi bi-arrow-left"></i></a>
         <h1>Relatório de Votação - ClickBest</h1>
     </header>
 
